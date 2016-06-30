@@ -1,0 +1,15 @@
+
+@if(@Model.Count == 0){
+  <h3>Search Again!</h3>
+}
+else{
+  <h3>Here are all the selected CDs:</h3>
+  <ol>
+    @foreach(var artist in @Model)
+    {
+      <li>@artist.GetName()</li>
+    }
+  </ol>
+}
+
+<p><a href="/">Return to Main Page</a></p>
